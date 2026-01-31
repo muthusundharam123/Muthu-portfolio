@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of M. Mutharasi - Full Stack Developer specialized in ASP.NET Core, Angular, and Cloud Technologies." />
+  <title>M. Mutharasi | Full Stack Developer</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="/src/css/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="cursor-blur"></div>
+
+  <nav class="navbar glass">
+    <div class="container nav-container">
+      <a href="#" class="logo">&lt;Mutharasi /&gt;</a>
+
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="nav_about"><span class="nav-number">01.</span> About</a></li>
+          <li><a href="#experience" data-i18n="nav_experience"><span class="nav-number">02.</span> Experience</a></li>
+          <li><a href="#skills" data-i18n="nav_skills"><span class="nav-number">03.</span> Skills</a></li>
+          <li><a href="#contact" data-i18n="nav_contact"><span class="nav-number">04.</span> Contact</a></li>
+          <li><a href="/resume.pdf" class="btn btn-outline" target="_blank" download="Mutharasi_Resume.pdf">Resume</a>
+          </li>
+        </ul>
+
+        <!-- <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="jp">JP</button>
+          <button class="lang-btn" data-lang="ta">TA</button>
+        </div> -->
+      </div>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <canvas id="hero-canvas"></canvas>
+      <div class="container hero-content">
+        <p class="hero-intro fade-up delay-1" data-i18n="hero_intro">Hi, my name is</p>
+        <h1 class="hero-name fade-up delay-2">M. Mutharasi.</h1>
+        <h2 class="hero-title fade-up delay-3" data-i18n="hero_title">I build things for the web.</h2>
+        <p class="hero-desc fade-up delay-4" data-i18n="hero_desc">
+          I'm a <span class="highlight">Full Stack Developer</span> specializing in building (and occasionally
+          designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered
+          products.
+        </p>
+        <div class="hero-cta fade-up delay-5">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero_cta">Get In Touch</a>
+        </div>
+      </div>
+      <div class="scroll-down fade-up delay-6">
+        <a href="#about"><span class="scroll-line"></span><span data-i18n="scroll_text">Scroll</span></a>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in"><span class="nav-number">01.</span> <span data-i18n="about_title">About
+            Me</span></h2>
+        <div class="about-content">
+          <div class="about-text fade-in-left">
+            <p data-i18n="about_p1">
+              Hello! My name is Mutharasi and I enjoy creating things that live on the internet. My interest in web
+              development started back in 2022 which eventually evolved into a passion for building scalable enterprise
+              applications.
+            </p>
+            <p data-i18n="about_p2">
+              I have 4 years of experience working with <strong>ASP.NET Core, MVC, Microservices</strong>, and modern
+              frontend frameworks like <strong>Angular</strong>. I've had the privilege of working on an <span
+                class="highlight">onsite assignment in Japan for Mitsubishi Fuso</span>, where I handled end-to-end
+              delivery of complex systems.
+            </p>
+            <p data-i18n="about_tech_intro">Here are a few technologies I've been working with recently:</p>
+            <ul class="skills-list">
+              <li>ASP.NET Core 8</li>
+              <li>Angular (10+)</li>
+              <li>Microservices</li>
+              <li>Docker</li>
+              <li>SQL Server & PostgreSQL</li>
+              <li>Redis & RabbitMQ</li>
+            </ul>
+          </div>
+          <div class="about-img fade-in-right">
+            <div class="img-wrapper">
+              <div class="img-placeholder">
+                <img src="/src/assets/profile.png" alt="M. Mutharasi"
+                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in"><span class="nav-number">02.</span> <span data-i18n="exp_title">Where I've
+            Worked</span></h2>
+        <div class="jobs-tabs">
+          <div class="tabs-list fade-in-left" role="tablist">
+            <button class="tab-btn active" data-target="job-1">PrimeMover</button>
+            <button class="tab-btn" data-target="job-2">Mitsubishi Fuso</button>
+            <button class="tab-btn" data-target="job-3">Jeyan Tech</button>
+          </div>
+          <div class="jobs-content fade-in-right">
+            <!-- Job 1 -->
+            <div id="job-1" class="job-panel active">
+              <h3>Full Stack Developer <span class="company">@ PrimeMover Solutions</span></h3>
+              <p class="job-duration">2024 - Present</p>
+              <ul class="job-desc">
+                <li>Delivered enterprise solutions using ASP.NET Core, Angular, and Microservices architecture.</li>
+                <li>Implemented <strong>Web Sockets</strong> for real-time communication and <strong>Redis</strong>
+                  caching for performance optimization.</li>
+                <li>Designed a 3D Map Proof of Concept for advanced visualization use cases.</li>
+                <li>Migrated legacy MVC applications to ASP.NET Core Microservices, implementing Docker deployments and
+                  RabbitMQ.</li>
+              </ul>
+            </div>
+
+            <!-- Job 2 -->
+            <div id="job-2" class="job-panel">
+              <h3>Onsite Consultant / Lead <span class="company">@ Mitsubishi Fuso (Japan)</span></h3>
+              <p class="job-duration">6 Months Onsite Assignment</p>
+              <ul class="job-desc">
+                <li>Independently handled the conversion of a legacy Perl Shell CAE application to a simple .NET-based
+                  solution.</li>
+                <li>Managed the project end-to-end: Architecture, Requirement Gathering, Development, UAT, and
+                  Production Release.</li>
+                <li>Collaborated directly with Japanese stakeholders, ensuring clear communication and timely delivery.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Job 3 -->
+            <div id="job-3" class="job-panel">
+              <h3>Software Engineer <span class="company">@ Jeyan Technologies</span></h3>
+              <p class="job-duration">2022 - 2024</p>
+              <ul class="job-desc">
+                <li>Worked on O2Vend, a product-based E-commerce POS and Inventory Management System.</li>
+                <li>Developed features using ASP.NET Core, MVC, Web APIs, Angular, and SQL Server.</li>
+                <li>Implemented complex business logic and database optimizations for high-volume transactions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION (Visual) -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in"><span class="nav-number">03.</span> <span data-i18n="skills_title">Technical
+            Arsenal</span></h2>
+        <div class="skills-grid">
+          <div class="skill-category card-hover fade-up">
+            <h3>Backend</h3>
+            <div class="tags">
+              <span>ASP.NET Core</span>
+              <span>C#</span>
+              <span>Microservices</span>
+              <span>REST APIs</span>
+              <span>Entity Framework</span>
+            </div>
+          </div>
+          <div class="skill-category card-hover fade-up delay-1">
+            <h3>Frontend</h3>
+            <div class="tags">
+              <span>Angular</span>
+              <span>TypeScript</span>
+              <span>JavaScript</span>
+              <span>HTML/CSS</span>
+              <span>Tailwind</span>
+            </div>
+          </div>
+          <div class="skill-category card-hover fade-up delay-2">
+            <h3>Database & Cloud</h3>
+            <div class="tags">
+              <span>SQL Server</span>
+              <span>PostgreSQL</span>
+              <span>MySQL</span>
+              <span>Redis</span>
+              <span>Docker</span>
+            </div>
+          </div>
+          <div class="skill-category card-hover fade-up delay-3">
+            <h3>Tools</h3>
+            <div class="tags">
+              <span>Git/GitHub</span>
+              <span>Jira</span>
+              <span>RabbitMQ</span>
+              <span>WebSockets</span>
+              <span>Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section text-center">
+      <div class="container contact-container">
+        <p class="highlight-text fade-up" data-i18n="contact_next">04. What's Next?</p>
+        <h2 class="big-title fade-up" data-i18n="contact_title">Get In Touch</h2>
+        <p class="contact-desc fade-up" data-i18n="contact_desc">
+          I am currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best
+          to get back to you!
+        </p>
+
+        <div class="contact-details fade-up">
+          <div class="contact-item">
+            <span class="icon">📞</span> +91 90920 46323
+          </div>
+          <div class="contact-item">
+            <span class="icon">✉️</span> mutharasisundharam1234@gmail.com
+          </div>
+          <div class="contact-item">
+            <span class="icon">📍</span> Ganapathy, Coimbatore, India
+          </div>
+        </div>
+
+        <div class="social-links fade-up">
+          <b data-i18n="contact_btn">Say Hello</b>
+        </div>
+
+        <a href="https://www.linkedin.com/in/mutharasi-m/" target="_blank"
+          class="btn btn-primary big-btn fade-up">LinkedIn</a>
+        <a href="mailto:mutharasisundharam1234@gmail.com" class="btn btn-primary big-btn fade-up">Email</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p data-i18n="footer_text">Designed & Built by M. Mutharasi</p>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
